@@ -9,7 +9,7 @@ import { Beer } from './model/beer';
 })
 export class BeerComponent implements OnInit {
 
-  beer!: Beer;
+  beers: Beer[] = [];
 
   constructor(private beerService: BeerService) {}
 
@@ -18,7 +18,7 @@ export class BeerComponent implements OnInit {
   }
 
   private getRandomBeer() {
-    this.beerService.getRandomBeer().subscribe(beer => this.beer = beer);
+    this.beerService.getRandomBeer().subscribe(beers => this.beers = beers);
   }
 
 }

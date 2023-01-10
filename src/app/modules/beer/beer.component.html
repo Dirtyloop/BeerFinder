@@ -1,4 +1,17 @@
-<p>beer works!</p>
-<p>Name: {{beer.name}}</p>
-<p>Tagline: {{beer.tagline}}</p>
-<p>Ibu: {{beer.ibu}}</p>
+<div class="header">
+<p>Let's try today:</p>
+</div>
+<div class="content">
+<div>
+    <img src={{beers[0].image_url}} width="50%" alt="Photo of this beer">
+</div>
+<div class="beer_info">
+    <ul *ngFor="let beer of beers" class="noDots">
+        <li><b>Name:</b> {{beer.name}}</li>
+        <li><b>Tagline:</b> {{beer.tagline}}</li>
+        <li><b>First brewed:</b> {{beer.first_brewed}}</li>
+        <li><b>Description:</b> {{beer.description}}</li>
+        <li><b>Ibu:</b> {{beer.ibu}}</li>
+    </ul>
+</div>
+</div>
